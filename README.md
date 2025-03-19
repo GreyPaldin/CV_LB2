@@ -46,7 +46,7 @@
 
 &ensp; Ниже приведены графические отображения работы алгоритма. Для изображения 1.
 
-&ensp; &ensp; &ensp; ![alt text](Image/Области1.png)
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  ![alt text](Image/Области1.png)
 
 &ensp; В данном случаи был сделан цветной градиент, где каждый цвет или его оттенок показывает принадлежность к той или иной области.
 
@@ -54,7 +54,7 @@
 
 &ensp; Ниже приведены графические отображения работы алгоритма. Для изображения 2.
 
-&ensp; &ensp; &ensp;![alt text](Image/Области2.png)
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/Области2.png)
 
 &ensp; Здесь же, несмотря на расширение изображения, было сформированно всего 334 области, что меньше, чем на первом изображении. Вероятнее всего, исходное изображение было искажено в генераторе краёв и при измеении форматов. Однако, для текущей задачи это не кретично.
 
@@ -95,13 +95,13 @@
 
 &ensp; Можно заметить, что блобы найденные на одном изображении, соответсвуют блобам на другом изображении и их номера совпадают. Это может быть не видно на изображении, однако, рассматривая набор сравнений можно увидеть, что области очень похожи или даже идентичны, что говорит о исправной работе алгоритма.
 
-![alt text](Image/Блобы_тест1.png)
+ &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  ![alt text](Image/Блобы_тест1.png)
 
-![alt text](Image/Блобы_тест2.png)
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  ![alt text](Image/Блобы_тест2.png)
 
-![alt text](Image/Блобы_тест3.png)
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/Блобы_тест3.png)
 
-![alt text](Image/Блобы_тест4.png)
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/Блобы_тест4.png)
 
 ### Алгоритм вычисления смещений
 
