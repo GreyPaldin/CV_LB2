@@ -227,22 +227,66 @@ dy = (blobs1[i1][1] - blobs2[j1][1] + blobs1[i2][1] - blobs2[j2][1]) / 2 ). По
 
 ![alt text](one_поворот.jpg)
 
-&ensp; Для этого попробуем брать два блоба (предполагая, что с высокой вероятностью они определены верно), после чего проводим между ними прямую и смотрим угол, образующий между этой прямой и горизонтальной линией (осю x). После делаем аналогичные вычисления на втором изображении с тем же набором блобов и высчитываем разницу между данными блобами. Данный метод достаточно не точен и способе скорее определить факт наличия поворота изображения, нежели что-то серьёзное.
+&ensp; Для этого попробуем брать два блоба (предполагая, что с высокой вероятностью они определены верно), после чего проводим между ними прямую и смотрим угол, образующий между этой прямой и горизонтальной линией (осю x). После делаем аналогичные вычисления на втором изображении с тем же набором блобов и высчитываем разницу между данными блобами. Проверяем так N наборов случайных точек, паралельно вычисляя среднее отклонение и, откидывая данные, которые сильно выделяются на фоне других. Таким образом будут фильтроваться выбросы. Данный метод достаточно не точен и способе скорее определить факт наличия поворота в небольших диапознах и приблизительно его вычислить. 
 
+&ensp; Рассмотрим, как происходит процесс определения опорных точек и как они между собой сопоставлены.
+
+![alt text](Image/СмещениеROT.png)
+
+&ensp; Определено достаточно много точек и уже вычислен угол поворота в 12 градусов, что в целом соответсвует дейсвтительности (это будет проверенно).
+
+&ensp; Рассмотрим сами блобы, которые были связаны между собой.
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT1.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT2.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT3.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT4.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT5.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT6.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT7.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT8.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT9.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT10.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT11.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT12.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT13.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT14.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT15.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT16.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT17.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT18.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT19.png)
+
+&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; ![alt text](Image/СмещениеROT20.png)
+
+&ensp; Проверим, насколько верно вычислен угол для повёрнутого изображения. Можно заметить, что поворот вычислен сранвительно корректно и точно. Проверка изображения на построение угла в КОМПАС 3D имеют некоторую погрешность из-за ручнго построения угла, в следствии чего будет некоторая ошибка. 
+
+![alt text](Image/ROT_KOMPAS.png)
+
+## Результаты работы
+
+&ensp; В рамках данной работы был реализовн детектор блобов, способный детектировать особые точки на изображении и сопоставлять их между собой на основе параметров этих областей. Следующим этапом было вычисление смещений на основе изменения координат всех блобов и проверка вычисленного результата на основе метода проверки, суть которого в попытке вычислить, как точка с изображения 1 должна была сместиться на изображении 2. Если по результатом вычислений получилось предсказать определённый набор точек с некоторой погрешностью - делается вывод о верности вычисленного смещения и алгоритм выдаёт ответ.
+
+&ensp; Вычисление углов поворота производится на основе выбора случайного набора точек, который в дальнейшем строит прямую и вычисляется угол между этой прямой и осью X. После, по аналогии, метод старается вычислить такие отклонения для всех остальных точек и взять среднее значение. При этом будет определяться угол поворота. Если он привышает определённый порог (который выставляется на основе того, что вычисление координат не абсолютно точно и даже на изображении без поворота может быть показан лёгкий поворот относительно первого), как можно видеть из опыта, лёгкий поворот легко детектируется.
 &ensp; 
-
-
-## Результат работы алгоритмов
-
-
-
-
-
-
-## Алгоритм поворотов
-
-&ensp;  
-
 
 
 
